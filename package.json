@@ -1,0 +1,31 @@
+{
+  "name": "taluspnp",
+  "version": "1.0.0",
+  "description": "CSS compiler for the Talus PnP system",
+  "scripts": {
+    "build": "npm run build:db && gulp build",
+    "build:clean": "node ./utils/packs.mjs package clean",
+    "build:db": "node ./utils/packs.mjs package pack",
+    "build:json": "node ./utils/packs.mjs package unpack",
+    "compile": "gulp css",
+    "watch": "gulp",
+    "gulp": "gulp"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Edwar D Day",
+  "license": "Apache",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.69.6",
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
+    "nedb-promises": "^6.2.3",
+    "fancy-log": "^2.0.0",
+    "yargs": "^17.7.2"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "taluspnp",
+  "title": "Talus PnP",
+  "description": "The Talus PnP system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Edwar D Day",
+      "url": "https://github.com/EdwarDDay/"
+    }
+  ],
+  "url": "https://github.com/EdwarDDay/taluspnp",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "https://github.com/EdwarDDay/taluspnp/issues",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "icons/sundries/gaming/dice-runed-tan.webp",
+      "thumbnail": "icons/sundries/gaming/dice-runed-tan.webp"
+    }
+  ],
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.315"
+  },
+  "esmodules": ["module/taluspnp.mjs"],
+  "styles": ["css/taluspnp.css"],
+  "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Talus PnP macros",
+      "system": "taluspnp",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "LIMITED",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "https://github.com/EdwarDDay/taluspnp/releases/latest/download/system.json",
+  "download": "https://github.com/EdwarDDay/taluspnp/releases/#{VERSION}#/download/taluspnp.zip",
+  "background": "icons/sundries/gaming/dice-runed-tan.webp",
+  "primaryTokenAttribute": "health"
+}

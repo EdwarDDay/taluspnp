@@ -1,0 +1,11 @@
+<p>
+<form><label for="increase">{{localize "TALUS_PNP.DialogIncreaseXpIncreaseAmountLabel"}}</label>
+    <input type='text' name='increase' value='1' data-dtype='Number'/>
+    <h5>{{localize "TALUS_PNP.DialogIncreaseXpSelectCharactersLabel"}}</h5>
+    <ul>
+        {{#each actors as |actor|}}
+            <li><input class="actor-checkbox" type="checkbox" name="id.{{actor.id}}" checked>{{actor.name}}</input></li>
+        {{/each}}
+    </ul>
+</form>
+</p>

@@ -1,0 +1,10 @@
+<div>
+  {{#each system.abilities as |ability key|}}
+    <div class="ability flexrow flex-group-center">
+      <label class="resource-label rollable flexlarge align-left" data-roll="3d6+@abilities.{{key}}.value" data-label="{{ability.label}}">{{ability.label}}</label>
+      <a class="ability-change" title="- {{ability.label}}" data-action="dec" data-ability="{{key}}"><i class="fas fa-minus"></i></a>
+      <span class="resource rollable" data-roll="3d6+@abilities.{{key}}.value" data-label="{{ability.label}}">{{ability.value}}</span>
+      <a class="ability-change" title="+ {{ability.label}}" data-action="inc" data-ability="{{key}}"><i class="fas fa-plus"></i></a>
+    </div>
+  {{/each}}
+</div>

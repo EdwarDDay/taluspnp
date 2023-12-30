@@ -1,0 +1,8 @@
+<div>
+  {{#each system.abilities as |ability key|}}
+    <div class="ability flexrow flex-group-center">
+      <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="3d6+@abilities.{{key}}.value" data-label="{{ability.label}}">{{ability.label}}</label>
+      <input type="text" data-dtype="Number" name="system.abilities.{{key}}.value" class="resource" value="{{ability.value}}" />
+    </div>
+  {{/each}}
+</div>

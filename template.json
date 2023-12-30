@@ -1,0 +1,56 @@
+{
+  "Actor": {
+    "types": ["character", "npc-witch", "npc-without-abilities"],
+    "templates": {
+      "base": {
+        "biography": ""
+      },
+      "witch": {
+        "attributes": {
+          "coven": "tarot"
+        },
+        "abilities": {
+          "ath": { "value": 0 },
+          "dex": { "value": 0 },
+          "kno": { "value": 0 },
+          "wil": { "value": 0 },
+          "cha": { "value": 0 },
+          "emp": { "value": 0 }
+        }
+      }
+    },
+    "character": {
+      "templates": ["base", "witch"],
+      "attributes": {
+        "xp": {
+          "value": 36
+        }
+      }
+    },
+    "npc-witch": {
+      "templates": ["base", "witch"]
+    },
+    "npc-without-abilities": {
+      "templates": ["base"]
+    }
+  },
+  "Item": {
+    "types": ["item", "person", "consequence"],
+    "templates": {
+      "base": {}
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "description": ""
+    },
+    "person": {
+      "templates": ["base"],
+      "description": ""
+    },
+    "consequence": {
+      "templates": ["base"],
+      "kind": "physical"
+    }
+  }
+}

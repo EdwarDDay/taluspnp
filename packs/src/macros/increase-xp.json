@@ -1,0 +1,23 @@
+{
+  "name": "Increase XP",
+  "type": "script",
+  "_id": "7Z39EJInQkEUAUbi",
+  "img": "icons/svg/upgrade.svg",
+  "scope": "global",
+  "command": "game.createIncreaseXpDialog();",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "taluspnp",
+    "systemVersion": "1.3.0-15",
+    "coreVersion": "11.315",
+    "createdTime": 1703838192343,
+    "modifiedTime": 1703838220964,
+    "lastModifiedBy": "talusBuilder0000"
+  },
+  "_key": "!macros!7Z39EJInQkEUAUbi"
+}

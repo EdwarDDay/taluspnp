@@ -1,0 +1,19 @@
+# IDE
+.idea/
+.vs/
+
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Foundry
+*.lock
+jsconfig.json
+foundry
+
+# packs will be created on build
+/packs/*
+!/packs/src
+
+# css will be created on build
+/css
