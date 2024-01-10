@@ -4,6 +4,14 @@
   "description": "The Talus PnP system for FoundryVTT!",
   "authors": [
     {
+      "name": "Liza Grimm",
+      "url": "https://liza-grimm.de/"
+    },
+    {
+      "name": "Christoph Hardebusch",
+      "url": "https://franigo.de/"
+    },
+    {
       "name": "Edwar D Day",
       "url": "https://github.com/EdwarDDay/"
     }

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [0.2.1] - 2024-01-10
+
+### Added
+- author references for system authors
+- mention designer of assets in README
+
 ## [0.2.0] - 2024-01-10
 
 ### Added
@@ -18,3 +24,4 @@
 
 [0.1.0]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.1.0
 [0.2.0]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.0
+[0.2.1]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.1
