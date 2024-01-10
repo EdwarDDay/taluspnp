@@ -1,0 +1,7 @@
+<div class="ability flexrow flex-group-center">
+  <label class="resource-label align-left" for="system.abilities.{{key}}.value">{{ability.label}}</label>
+  <input type="text" data-dtype="Number" name="system.abilities.{{key}}.value" class="flexlarge resource" value="{{ability.value}}" />
+  <div class="resource-label align-right">
+    <img class="resource rollable" src="systems/taluspnp/assets/talus_wuerfel-icon.png" data-roll="3d6+@abilities.{{key}}.value" data-label="{{ability.label}}"/>
+  </div>
+</div>

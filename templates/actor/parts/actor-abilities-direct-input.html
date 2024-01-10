@@ -1,8 +1,19 @@
-<div>
-  {{#each system.abilities as |ability key|}}
-    <div class="ability flexrow flex-group-center">
-      <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="3d6+@abilities.{{key}}.value" data-label="{{ability.label}}">{{ability.label}}</label>
-      <input type="text" data-dtype="Number" name="system.abilities.{{key}}.value" class="resource" value="{{ability.value}}" />
+<section class="grid grid-11col">
+  <div class="grid-span-5">
+    <h3>{{localize "TALUS_PNP.CharacterSheetNavigationAbilities"}}</h3>
+    <div>
+    {{#each system.leftAbilities as |ability key|}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-ability-direct-input.html" key=key ability=ability}}
+    {{/each}}
     </div>
-  {{/each}}
-</div>
+  </div>
+  <div class="grid-span-1">
+    <img class="ornament vertical" src="systems/taluspnp/assets/talus-dagger_light-mode.png" />
+  </div>
+  <div class="grid-span-5">
+    <h3>&nbsp;</h3>
+    {{#each system.rightAbilities as |ability key|}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-ability-direct-input.html" key=key ability=ability}}
+    {{/each}}
+  </div>
+</section>

@@ -13,7 +13,7 @@
   "flags": {},
   "_stats": {
     "systemId": "taluspnp",
-    "systemVersion": "1.3.0-15",
+    "systemVersion": "#{VERSION}#",
     "coreVersion": "11.315",
     "createdTime": 1703838192343,
     "modifiedTime": 1703838220964,

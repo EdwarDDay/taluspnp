@@ -1,0 +1,15 @@
+<li class="item consequence" data-item-id="{{consequence._id}}">
+  <span class="slot">{{slot}}:</span>
+  {{#if consequence._id}}
+    <div class="item-name flexrow align-left">
+      <div class="item-image">
+        <img src="{{consequence.img}}" title="{{consequence.name}}" width="24" height="24"/>
+      </div>
+      <h4 class="{{consequence.kind.class}}">{{consequence.name}}</h4>
+    </div>
+    <div class="item-controls">
+      <a class="item-control item-edit" title="{{localize "TALUS_PNP.CharacterSheetConsequencesEdit"}}"><i class="fas fa-edit"></i></a>
+      <a class="item-control item-delete" title="{{localize "TALUS_PNP.CharacterSheetConsequencesDelete"}}"><i class="fas fa-trash"></i></a>
+    </div>
+  {{/if}}
+</li>

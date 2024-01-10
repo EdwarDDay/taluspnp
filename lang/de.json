@@ -1,4 +1,12 @@
 {
+  "TYPES.Actor.character": "Charakter",
+  "TYPES.Actor.npc-witch": "Hexe",
+  "TYPES.Actor.npc-without-abilities": "Mensch",
+
+  "TYPES.Item.item": "Wichtiger Gegenstand",
+  "TYPES.Item.person": "Wichtige Person",
+  "TYPES.Item.consequence": "Konsequenz",
+
   "TALUS_PNP.AbilityAth": "Athletik",
   "TALUS_PNP.AbilityDex": "Geschick",
   "TALUS_PNP.AbilityKno": "Bildung",
@@ -14,11 +22,11 @@
   "TALUS_PNP.AbilityEmpAbbr": "emp",
 
   "TALUS_PNP.ConsequenceKindPhysical": "physisch",
-  "TALUS_PNP.ConsequencePhysical": "physische Konsequenz",
+  "TALUS_PNP.ConsequencePhysicalAdd": "physische Konsequenz hinzufügen",
   "TALUS_PNP.ConsequenceKindMental": "mental",
-  "TALUS_PNP.ConsequenceMental": "mentale Konsequenz",
+  "TALUS_PNP.ConsequenceMentalAdd": "mentale Konsequenz hinzufügen",
   "TALUS_PNP.ConsequenceKindSocial": "sozial",
-  "TALUS_PNP.ConsequenceSocial": "soziale Konsequenz",
+  "TALUS_PNP.ConsequenceSocialAdd": "soziale Konsequenz hinzufügen",
   "TALUS_PNP.ConsequenceKindLabel": "Typ",
 
   "TALUS_PNP.CovensLabel": "Zirkel",
@@ -40,15 +48,16 @@
   "TALUS_PNP.CovensHerbsDescription": "<p>Die Hexen des Kr&auml;uterzirkels spezialisieren sich oft auf eine Pflanzenart und besitzen ein umfangreiches Wissen rund um Botanik.</p>",
   "TALUS_PNP.CovensTarotDescription": "<p>Tarotleger achten sehr auf ihre Mimik und Gestik und verm&ouml;gen es si, nicht nur mithilfe ihrer Karten, andere Hexen zu lesen.</p>",
 
-  "TALUS_PNP.XPLabel": "Level (EP)",
+  "TALUS_PNP.XPLabel": "EP",
   "TALUS_PNP.DialogIncreaseXpTitle": "EP erhöhen",
   "TALUS_PNP.DialogIncreaseXpButtonCancel": "Abbrechen",
   "TALUS_PNP.DialogIncreaseXpIncreaseAmountLabel": "EP erhöhen um:",
   "TALUS_PNP.DialogIncreaseXpSelectCharactersLabel": "Wähle die Characktere:",
 
-  "TALUS_PNP.CharacterSheetNavigationItems": "Gegenstände",
+  "TALUS_PNP.CharacterSheetNavigationItems": "Wichtige Gegenstände",
+  "TALUS_PNP.CharacterSheetNavigationAbilities": "Fähigkeiten",
   "TALUS_PNP.CharacterSheetNavigationConsequences": "Konsequenzen",
-  "TALUS_PNP.CharacterSheetNavigationPeople": "Personen",
+  "TALUS_PNP.CharacterSheetNavigationPeople": "Wichtige Personen",
   "TALUS_PNP.CharacterSheetNavigationDescription": "Beschreibung",
 
   "TALUS_PNP.CharacterSheetConsequencesAdd": "Konsequenz hinzufügen",

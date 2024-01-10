@@ -23,7 +23,7 @@ jobs:
         id: sub_manifest_link_version
         uses: cschleiden/replace-tokens@v1.2
         with:
-          files: 'system.json'
+          files: '[system.json, packs/src/**/*.json]'
         env:
           VERSION: ${{ steps.get_version.outputs.version-without-v }}
 
@@ -42,6 +42,7 @@ jobs:
           zip                                    \
             --recurse-paths                      \
             ./taluspnp.zip                       \
+            assets/                              \
             css/                                 \
             lang/                                \
             module/                              \

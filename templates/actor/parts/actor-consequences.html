@@ -1,24 +1,22 @@
-<ol class="items-list">
-  {{#each consequences as |consequenceKind kind|}}
-    <li class="item flexrow items-header">
-      <div class="item-name" style="color: {{consequenceKind.color}}">{{localize consequenceKind.labelConsequences}}</div>
-      <div class="item-controls">
-        <a class="item-control item-create" title="{{localize "TALUS_PNP.CharacterSheetConsequencesAdd"}}" data-type="consequence" data-kind="{{kind}}"><i class="fas fa-plus"></i> {{localize "TALUS_PNP.CharacterSheetConsequencesAdd"}}</a>
-      </div>
-    </li>
-    {{#each consequenceKind.values as |item id|}}
-      <li class="item flexrow" data-item-id="{{item._id}}">
-        <div class="item-name flexrow">
-          <div class="item-image">
-            <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-          </div>
-          <h4>{{item.name}}</h4>
-        </div>
-        <div class="item-controls">
-          <a class="item-control item-edit" title="{{localize "TALUS_PNP.CharacterSheetConsequencesEdit"}}"><i class="fas fa-edit"></i></a>
-          <a class="item-control item-delete" title="{{localize "TALUS_PNP.CharacterSheetConsequencesDelete"}}"><i class="fas fa-trash"></i></a>
-        </div>
-      </li>
+<div class="consequences">
+  <h3>{{localize "TALUS_PNP.CharacterSheetNavigationConsequences"}}</h3>
+  <div class="item-controls">
+    {{#each consequenceKinds as |consequenceKindData kind|}}
+      <a class="item-control item-create {{consequenceKindData.class}}"
+         title="{{localize consequenceKindData.labelAddConsequences}}" data-type="consequence" data-kind="{{kind}}"><i
+          class="fas fa-plus"></i> {{localize consequenceKindData.labelAddConsequences}}</a>
     {{/each}}
-  {{/each}}
-</ol>
+  </div>
+  <div class="grid grid-2col">
+    <ol class="items-list">
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 1) slot=1}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 2) slot=2}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 3) slot=3}}
+    </ol>
+    <ol class="items-list">
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 4) slot=4}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 5) slot=5}}
+      {{> "systems/taluspnp/templates/actor/parts/actor-consequence.html" consequence=(lookup consequences 6) slot=6}}
+    </ol>
+  </div>
+</div>

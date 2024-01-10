@@ -96,6 +96,16 @@ export class TalusPNPActorSheet extends ActorSheet {
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.TALUS_PNP.abilities[k]) ?? k;
     }
+    context.system.leftAbilities = {
+      ath: context.system.abilities.ath,
+      dex: context.system.abilities.dex,
+      kno: context.system.abilities.kno,
+    };
+    context.system.rightAbilities = {
+      wil: context.system.abilities.wil,
+      cha: context.system.abilities.cha,
+      emp: context.system.abilities.emp,
+    };
   }
 
   /**
@@ -109,10 +119,8 @@ export class TalusPNPActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const people = [];
-    const consequences = structuredClone(CONFIG.TALUS_PNP.consequenceKinds);
-    for (let [key, value] of Object.entries(consequences)) {
-        value.values = [];
-    }
+    let nextConsequence = 1;
+    const consequences = { 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {} };
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -128,8 +136,10 @@ export class TalusPNPActorSheet extends ActorSheet {
       }
       // Append to consequences.
       else if (i.type === 'consequence') {
-        if (i.system.kind != undefined) {
-          consequences[i.system.kind].values.push(i);
+        if (i.system.kind != undefined && nextConsequence < 7) {
+          const consequence = Object.assign({}, i);
+          consequence.kind = CONFIG.TALUS_PNP.consequenceKinds[i.system.kind];
+          consequences[nextConsequence++] = consequence;
         }
       }
     }
@@ -138,6 +148,7 @@ export class TalusPNPActorSheet extends ActorSheet {
     context.gear = gear;
     context.people = people;
     context.consequences = consequences;
+    context.consequenceKinds = CONFIG.TALUS_PNP.consequenceKinds;
   }
 
   /* -------------------------------------------- */

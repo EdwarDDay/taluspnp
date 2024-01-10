@@ -16,8 +16,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "icons/sundries/gaming/dice-runed-tan.webp",
-      "thumbnail": "icons/sundries/gaming/dice-runed-tan.webp"
+      "url": "systems/taluspnp/assets/talus_wuerfel-icon.png",
+      "thumbnail": "systems/taluspnp/assets/talus_wuerfel-icon.png"
     }
   ],
   "version": "#{VERSION}#",
@@ -56,6 +56,6 @@
   "socket": false,
   "manifest": "https://github.com/EdwarDDay/taluspnp/releases/latest/download/system.json",
   "download": "https://github.com/EdwarDDay/taluspnp/releases/#{VERSION}#/download/taluspnp.zip",
-  "background": "icons/sundries/gaming/dice-runed-tan.webp",
+  "background": "systems/taluspnp/assets/talus-pnp-logo.png",
   "primaryTokenAttribute": "health"
 }

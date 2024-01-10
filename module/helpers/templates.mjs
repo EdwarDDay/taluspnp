@@ -9,6 +9,9 @@
     // Actor partials.
     "systems/taluspnp/templates/actor/parts/actor-abilities-direct-input.html",
     "systems/taluspnp/templates/actor/parts/actor-abilities.html",
+    "systems/taluspnp/templates/actor/parts/actor-ability-direct-input.html",
+    "systems/taluspnp/templates/actor/parts/actor-ability.html",
+    "systems/taluspnp/templates/actor/parts/actor-consequence.html",
     "systems/taluspnp/templates/actor/parts/actor-consequences.html",
     "systems/taluspnp/templates/actor/parts/actor-coven.html",
     "systems/taluspnp/templates/actor/parts/actor-items.html",

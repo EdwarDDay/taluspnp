@@ -1,76 +1,49 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
 
   {{!-- Sheet Header --}}
+  <img class="ornament" src="systems/taluspnp/assets/talus-header_light-mode.png" />
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "TALUS_PNP.GeneralItemSheetName"}}"/></h1>
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <div class="resources grid grid-2col">
-        {{!-- "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. --}}
+    <section class="grid grid-3col">
+      <div class="header-fields grid-span-2">
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "TALUS_PNP.GeneralItemSheetName"}}"/></h1>
         <div class="resource flex-group-center">
           {{> "systems/taluspnp/templates/actor/parts/actor-coven.html"}}
         </div>
-
         <div class="resource flex-group-center">
           <label class="resource-label">{{localize "TALUS_PNP.XPLabel"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-            <span>{{system.attributes.xp.level}} ({{system.attributes.xp.value}})</span>
+            <h4 class="charname"><input name="system.attributes.xp.value" type="text" value="{{system.attributes.xp.value}}" placeholder="0"/></h4>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
   </header>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-    <section class="grid grid-3col">
-      <aside class="sidebar grid-span-1">
-
-        {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-        use both the "grid" and "grid-Ncol" class where "N" can be any number
-        from 1 to 12 and will create that number of columns.  --}}
-        {{!-- Owned Features Tab --}}
-        <div class="abilities flexcol">
-          {{> "systems/taluspnp/templates/actor/parts/actor-abilities.html"}}
-        </div>
-      </aside>
-      <section class="grid-span-2">
-        {{!-- Sheet Tab Navigation --}}
-        <nav class="sheet-tabs tabs" data-group="primary">
-          {{!-- Default tab is specified in actor-sheet.mjs --}}
-          <a class="item" data-tab="items">{{localize "TALUS_PNP.CharacterSheetNavigationItems"}}</a>
-          <a class="item" data-tab="consequence">{{localize "TALUS_PNP.CharacterSheetNavigationConsequences"}}</a>
-          <a class="item" data-tab="person">{{localize "TALUS_PNP.CharacterSheetNavigationPeople"}}</a>
-          <a class="item" data-tab="description">{{localize "TALUS_PNP.CharacterSheetNavigationDescription"}}</a>
-        </nav>
-
-        {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
-          {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-          {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner
-               editable=editable}}
-        </div>
-
-        {{!-- Owned Items Tab --}}
-        <div class="tab items" data-group="primary" data-tab="items">
-          {{> "systems/taluspnp/templates/actor/parts/actor-items.html"}}
-        </div>
-
-        {{!-- Consequences Tab --}}
-        <div class="tab spells" data-group="primary" data-tab="consequence">
-          {{> "systems/taluspnp/templates/actor/parts/actor-consequences.html"}}
-        </div>
-
-        {{!-- known People Tab --}}
-        <div class="tab spells" data-group="primary" data-tab="person">
-          {{> "systems/taluspnp/templates/actor/parts/actor-person.html"}}
-        </div>
-      </section>
+    <img class="ornament" src="systems/taluspnp/assets/talus-ornament_light-mode.png" />
+    {{> "systems/taluspnp/templates/actor/parts/actor-abilities.html"}}
+    <img class="ornament" src="systems/taluspnp/assets/talus-ornament_light-mode.png" />
+    {{> "systems/taluspnp/templates/actor/parts/actor-consequences.html"}}
+    <img class="ornament" src="systems/taluspnp/assets/talus-ornament_light-mode.png" />
+    <section class="grid grid-11col">
+      <div class="grid-span-5">
+        <h3>{{localize "TALUS_PNP.CharacterSheetNavigationPeople"}}</h3>
+        {{> "systems/taluspnp/templates/actor/parts/actor-person.html"}}
+      </div>
+      <div class="grid-span-1">
+        <img class="ornament vertical" src="systems/taluspnp/assets/talus-dagger_light-mode.png" />
+      </div>
+      <div class="grid-span-5">
+        <h3>{{localize "TALUS_PNP.CharacterSheetNavigationItems"}}</h3>
+        {{> "systems/taluspnp/templates/actor/parts/actor-items.html"}}
+      </div>
     </section>
+    <h3>{{localize "TALUS_PNP.CharacterSheetNavigationDescription"}}</h3>
+    <div class="biography" data-group="primary" data-tab="description">
+        {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+    <img class="ornament" src="systems/taluspnp/assets/talus-footer_light-mode.png" />
   </section>
 </form>

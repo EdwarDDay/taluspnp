@@ -13,6 +13,12 @@
 .taluspnp {
   @import 'components/forms';
   @import 'components/resource';
+  @import 'components/images';
   @import 'components/items';
   @import 'components/effects';
+}
+
+/* Styles limited to the talus system */
+.system-taluspnp {
+  @import 'components/dice';
 }

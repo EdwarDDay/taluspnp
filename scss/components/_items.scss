@@ -58,7 +58,7 @@
   // Control Buttons
   .item-controls {
     display: flex;
-    flex: 0 0 100px;
+    flex: 0 0 fit-content;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -110,5 +110,25 @@
       text-align: left;
       // font-size: 16px;
     }
+  }
+}
+
+// consequences
+.consequences {
+  .consequence {
+    display: flex;
+    height: 32px;
+    .slot {
+      padding-right: 8px;
+    }
+  }
+  .consequence-physical {
+    color: red;
+  }
+  .consequence-mental {
+    color: blue;
+  }
+  .consequence-social {
+    color: green;
   }
 }

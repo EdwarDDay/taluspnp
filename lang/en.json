@@ -1,4 +1,12 @@
 {
+  "TYPES.Actor.character": "Character",
+  "TYPES.Actor.npc-witch": "Witch",
+  "TYPES.Actor.npc-without-abilities": "Human",
+
+  "TYPES.Item.item": "Important item",
+  "TYPES.Item.person": "Important person",
+  "TYPES.Item.consequence": "Consequence",
+
   "TALUS_PNP.AbilityAth": "Athletics",
   "TALUS_PNP.AbilityDex": "Dexterity",
   "TALUS_PNP.AbilityKno": "Knowledge",
@@ -14,11 +22,11 @@
   "TALUS_PNP.AbilityEmpAbbr": "emp",
 
   "TALUS_PNP.ConsequenceKindPhysical": "physical",
-  "TALUS_PNP.ConsequencePhysical": "physical consequence",
+  "TALUS_PNP.ConsequencePhysicalAdd": "Add physical consequence",
   "TALUS_PNP.ConsequenceKindMental": "mental",
-  "TALUS_PNP.ConsequenceMental": "mental consequence",
+  "TALUS_PNP.ConsequenceMentalAdd": "Add mental consequence",
   "TALUS_PNP.ConsequenceKindSocial": "social",
-  "TALUS_PNP.ConsequenceSocial": "social consequence",
+  "TALUS_PNP.ConsequenceSocialAdd": "Add social consequence",
   "TALUS_PNP.ConsequenceKindLabel": "Kind",
 
   "TALUS_PNP.CovensLabel": "Coven",
@@ -40,15 +48,16 @@
   "TALUS_PNP.CovensHerbsDescription": "<p>The witches of the herb coven often specialise in one type of plant and have extensive knowledge of botany.</p>",
   "TALUS_PNP.CovensTarotDescription": "<p>Tarot readers pay close attention to their facial expressions and gestures and are able to read other witches, not only with the help of their cards.</p>",
 
-  "TALUS_PNP.XPLabel": "Level (XP)",
+  "TALUS_PNP.XPLabel": "XP",
   "TALUS_PNP.DialogIncreaseXpTitle": "Increase XP",
   "TALUS_PNP.DialogIncreaseXpButtonCancel": "Cancel",
   "TALUS_PNP.DialogIncreaseXpIncreaseAmountLabel": "Increase XP amount:",
   "TALUS_PNP.DialogIncreaseXpSelectCharactersLabel": "Select characters:",
 
-  "TALUS_PNP.CharacterSheetNavigationItems": "Items",
+  "TALUS_PNP.CharacterSheetNavigationItems": "Important Items",
+  "TALUS_PNP.CharacterSheetNavigationAbilities": "Abilities",
   "TALUS_PNP.CharacterSheetNavigationConsequences": "Consequences",
-  "TALUS_PNP.CharacterSheetNavigationPeople": "People",
+  "TALUS_PNP.CharacterSheetNavigationPeople": "Important People",
   "TALUS_PNP.CharacterSheetNavigationDescription": "Description",
 
   "TALUS_PNP.CharacterSheetConsequencesAdd": "Add consequence",

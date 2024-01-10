@@ -65,4 +65,18 @@ export class TalusPNPItem extends Item {
       return roll;
     }
   }
+
+  static getDefaultArtwork(itemData) {
+    let image;
+    if (itemData.type == 'consequence') {
+      image = CONFIG.TALUS_PNP.consequenceKinds[itemData?.system?.kind ?? 'physical'].defaultImage;
+    } else if (itemData.type == 'person') {
+      image = 'icons/equipment/head/hat-pointed-leather-black-glowing.webp';
+    } else if (itemData.type == 'item') {
+      image = 'icons/weapons/wands/wand-crook-yellow.webp';
+    } else {
+      image = this.DEFAULT_ICON;
+    }
+    return { img: image };
+  }
 }

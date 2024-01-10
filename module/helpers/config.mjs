@@ -94,17 +94,20 @@ TALUS_PNP.covenAttributes = {
 TALUS_PNP.consequenceKinds = {
   physical: {
     label: "TALUS_PNP.ConsequenceKindPhysical",
-    labelConsequences: "TALUS_PNP.ConsequencePhysical",
-    color: "red"
+    labelAddConsequences: "TALUS_PNP.ConsequencePhysicalAdd",
+    class: "consequence-physical",
+    defaultImage: "icons/skills/wounds/bone-broken-knee-beam.webp"
   },
   mental: {
     label: "TALUS_PNP.ConsequenceKindMental",
-    labelConsequences: "TALUS_PNP.ConsequenceMental",
-    color: "blue"
+    labelAddConsequences: "TALUS_PNP.ConsequenceMentalAdd",
+    class: "consequence-mental",
+    defaultImage: "icons/skills/wounds/injury-face-impact-orange.webp"
   },
   social: {
     label: "TALUS_PNP.ConsequenceKindSocial",
-    labelConsequences: "TALUS_PNP.ConsequenceSocial",
-    color: "green"
+    labelAddConsequences: "TALUS_PNP.ConsequenceSocialAdd",
+    class: "consequence-social",
+    defaultImage: "icons/skills/movement/figure-running-gray.webp",
   },
 }

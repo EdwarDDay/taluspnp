@@ -1,0 +1,12 @@
+img.ornament {
+  border: 0px;
+  max-height: 75px;
+  &.vertical {
+    max-height: fit-content;
+  }
+}
+
+img.rollable {
+  height: 32px;
+  width: 32px;
+}

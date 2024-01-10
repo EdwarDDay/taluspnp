@@ -61,7 +61,6 @@ export class TalusPNPActor extends Actor {
 
   _calculateXP(systemData) {
     const level = Math.floor(systemData.attributes.xp.value / 6);
-    systemData.attributes.xp.level = level;
     const initialLevelDone = Object.values(systemData.abilities).reduce((acc, ability) => acc + ability.value, 0) >= 6;
     systemData.attributes.xp.initialLevelDone = initialLevelDone;
 
@@ -70,30 +69,6 @@ export class TalusPNPActor extends Actor {
       v.decreasable = v.value > 0;
     }
   }
-
-  /*increaseAbility(ability) {
-    if (ability && this.system.abilities[ability] && this.system.abilities[ability].increasable) {
-      this.system.attributes.xp.value -= 6;
-      this.system.abilities[ability].value += 1;
-      // update data
-      this._prepareCharacterData(this);
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  decreaseAbility(ability) {
-    if (ability && this.system.abilities[ability] && this.system.abilities[ability].decreasable) {
-      this.system.abilities[ability].value -= 1;
-      this.system.attributes.xp.value += 6;
-      // update data
-      this._prepareCharacterData(this);
-      return true;
-    } else {
-      return false;
-    }
-  }*/
 
   async increaseAbility(ability) {
     if (ability && this.system.abilities[ability] && this.system.abilities[ability].increasable) {

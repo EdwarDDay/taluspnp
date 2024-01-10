@@ -44,6 +44,10 @@
   height: 100%;
 }
 
+.editor-content {
+  min-height: 40px;
+}
+
 .tox {
   .tox-editor-container {
     background: $c-white;
