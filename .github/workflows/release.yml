@@ -67,3 +67,10 @@ jobs:
           name: ${{ steps.get_version.outputs.version-without-v }}
           tag: ${{ steps.get_version.outputs.version }}
           body: ${{ steps.changelog_reader.outputs.changes }}
+
+      - name: Release
+        uses: illandril/FoundryVTT-package-release-action@v1.0.1
+        with:
+          package-release-token: ${{ secrets.PACKAGE_RELEASE_TOKEN }}
+          manifest-url: "https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version-without-v }}/system.json"
+          dry-run: true
