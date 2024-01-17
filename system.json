@@ -17,10 +17,10 @@
     }
   ],
   "url": "https://github.com/EdwarDDay/taluspnp",
-  "license": "LICENSE.txt",
-  "readme": "README.md",
+  "license": "https://github.com/EdwarDDay/taluspnp/blob/#{VERSION}#/LICENSE.txt",
+  "readme": "https://github.com/EdwarDDay/taluspnp/blob/#{VERSION}#/README.md",
   "bugs": "https://github.com/EdwarDDay/taluspnp/issues",
-  "changelog": "CHANGELOG.md",
+  "changelog": "https://github.com/EdwarDDay/taluspnp/blob/#{VERSION}#/CHANGELOG.md",
   "media": [
     {
       "type": "setup",

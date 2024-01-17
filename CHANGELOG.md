@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [0.2.2] - 2024-01-17
+
+### Added
+- automatic foundry release
+
+### Fixed
+- links to changelog and readme
+
 ## [0.2.1] - 2024-01-10
 
 ### Added
@@ -25,3 +33,4 @@
 [0.1.0]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.1.0
 [0.2.0]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.0
 [0.2.1]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.1
+[0.2.2]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.2
