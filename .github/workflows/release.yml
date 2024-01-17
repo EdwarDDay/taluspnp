@@ -73,4 +73,3 @@ jobs:
         with:
           package-release-token: ${{ secrets.PACKAGE_RELEASE_TOKEN }}
           manifest-url: "https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version-without-v }}/system.json"
-          dry-run: true
