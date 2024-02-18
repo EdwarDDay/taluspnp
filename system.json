@@ -63,7 +63,7 @@
   "packFolders": [],
   "socket": false,
   "manifest": "https://github.com/EdwarDDay/taluspnp/releases/latest/download/system.json",
-  "download": "https://github.com/EdwarDDay/taluspnp/releases/#{VERSION}#/download/taluspnp.zip",
+  "download": "https://github.com/EdwarDDay/taluspnp/releases/download/#{VERSION}#/taluspnp.zip",
   "background": "systems/taluspnp/assets/talus-pnp-logo.png",
   "primaryTokenAttribute": "health"
 }
