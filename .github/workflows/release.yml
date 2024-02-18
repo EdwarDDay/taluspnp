@@ -17,7 +17,7 @@ jobs:
 
       - name: Extract Version
         id: get_version
-        uses: battila7/get-version-action@v2.2.1
+        uses: battila7/get-version-action@v2.3.0
 
       - name: Modify manifest file
         id: sub_manifest_link_version
