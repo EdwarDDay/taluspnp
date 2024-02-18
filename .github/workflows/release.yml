@@ -59,7 +59,7 @@ jobs:
       # Update the GitHub release with the manifest and system archive files.
       - name: Update Release With Files
         id: create_version_release
-        uses: ncipollo/release-action@v1.13.0
+        uses: ncipollo/release-action@v1.14.0
         with:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
