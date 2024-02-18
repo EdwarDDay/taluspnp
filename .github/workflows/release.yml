@@ -21,7 +21,7 @@ jobs:
 
       - name: Modify manifest file
         id: sub_manifest_link_version
-        uses: cschleiden/replace-tokens@v1.2
+        uses: cschleiden/replace-tokens@v1.3
         with:
           files: '["system.json", "packs/src/**/*.json"]'
         env:
