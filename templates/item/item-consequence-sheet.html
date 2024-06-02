@@ -8,11 +8,7 @@
       <div class="resource flex-group-center">
         <label class="resource-label" for="system.kind">{{localize "TALUS_PNP.ConsequenceKindLabel"}}</label>
         <select name="system.kind">
-          {{#select system.kind}}
-            {{#each consequenceKinds as |consequenceKindData kind|}}
-              <option value="{{kind}}">{{localize consequenceKindData.label}}</option>
-            {{/each}}
-          {{/select}}
+          {{selectOptions consequenceKinds selected=system.kind labelAttr="label" localize=true}}
         </select>
       </div>
     </div>

@@ -66,6 +66,7 @@ export class TalusPNPItem extends Item {
     }
   }
 
+  /** @inheritDoc */
   static getDefaultArtwork(itemData) {
     let image;
     if (itemData.type == 'consequence') {

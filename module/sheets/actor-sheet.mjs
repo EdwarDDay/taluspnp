@@ -9,7 +9,7 @@ export class TalusPNPActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["taluspnp", "sheet", "actor"],
       width: 600,
       height: 600,
@@ -85,7 +85,7 @@ export class TalusPNPActorSheet extends ActorSheet {
   /**
      * Organize and classify defaults for Character sheets.
      *
-     * @param {Object} actorData The actor to prepare.
+     * @param {Object} context The actor to prepare.
      *
      * @return {undefined}
      */
@@ -111,7 +111,7 @@ export class TalusPNPActorSheet extends ActorSheet {
   /**
    * Organize and classify Items for Character sheets.
    *
-   * @param {Object} actorData The actor to prepare.
+   * @param {Object} context The actor to prepare.
    *
    * @return {undefined}
    */
@@ -209,7 +209,7 @@ export class TalusPNPActorSheet extends ActorSheet {
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const data = foundry.utils.duplicate(header.dataset);
     // Initialize a default name.
     const name = `New ${type.capitalize()}`;
     // Prepare the item object.
@@ -222,7 +222,7 @@ export class TalusPNPActorSheet extends ActorSheet {
     delete itemData.system["type"];
 
     // Finally, create the item!
-    return await Item.create(itemData, {parent: this.actor});
+    return await Item.implementation.create(itemData, {parent: this.actor});
   }
 
   async _onAbilityChange(event) {

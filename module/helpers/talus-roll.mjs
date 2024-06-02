@@ -11,7 +11,7 @@ export class TalusRoll extends Roll {
   async _talusArgs(isPrivate) {
     const dice = this.dice;
     if (dice.length == 1 && dice[0].number == 3 && dice[0].faces == 6) {
-      if ( !this._evaluated ) await this.evaluate({async: true});
+      if ( !this._evaluated ) await this.evaluate();
       const talusDie = this.dice[0].values[0];
       let templateDice = "2-5";
       switch (talusDie) {

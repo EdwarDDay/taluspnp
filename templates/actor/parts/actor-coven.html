@@ -2,11 +2,7 @@
   <label for="system.attributes.coven" class="resource-label">{{localize "TALUS_PNP.CovensLabel"}}</label>
   <div class="resource-content flexrow flex-center flex-between">
     <select name="system.attributes.coven">
-      {{#select system.attributes.coven}}
-        {{#each covenAttributes as |attributes coven|}}
-          <option value="{{coven}}">{{localize attributes.label}}</option>
-        {{/each}}
-      {{/select}}
+      {{selectOptions covenAttributes selected=system.attributes.coven labelAttr="label" localize=true }}
     </select>
   </div>
 </div>
