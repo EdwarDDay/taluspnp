@@ -2,6 +2,8 @@
 
 ## [UNRELEASED]
 
+## [0.3.0] - 2024-06-02
+
 ### Changed
 - add support for FoundryVTT 12
 
@@ -45,4 +47,5 @@
 [0.2.1]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.1
 [0.2.2]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.2
 [0.2.3]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.2.3
+[0.3.0]: https://github.com/EdwarDDay/taluspnp/releases/tag/0.3.0
 [UNRELEASED]: https://github.com/EdwarDDay/taluspnp
