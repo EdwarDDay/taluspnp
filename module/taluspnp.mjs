@@ -133,35 +133,41 @@ function rollItemMacro(itemUuid) {
 
 function createIncreaseXpMacro() {
   game.createIncreaseXpDialog = async function () {
-    const actors = game.actors.filter(a => a.type == 'character');
+    const actors = game.actors.filter(a => a.type === 'character');
     const contentHtml = await renderTemplate('systems/taluspnp/templates/hud/increaseXp.html', {actors: actors});
-    const dialog = new Dialog({
-      title: game.i18n.localize("TALUS_PNP.DialogIncreaseXpTitle"),
+    const dialog = new foundry.applications.api.DialogV2({
+      window: { title: game.i18n.localize("TALUS_PNP.DialogIncreaseXpTitle") },
       content: contentHtml,
-      buttons: {
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("TALUS_PNP.DialogIncreaseXpButtonCancel")
+      buttons: [
+        {
+          action: 'cancel',
+          label: game.i18n.localize("TALUS_PNP.DialogIncreaseXpButtonCancel"),
+          icon: 'fas fa-times'
         },
-        increase: {
-          icon: '<i class="fas fa-check"></i>',
+        {
+          action: 'increase',
           label: game.i18n.localize("TALUS_PNP.DialogIncreaseXpTitle"),
-          callback: (target, event) => {
-            const t = new FormDataExtended(target[0].querySelector("form")).object;
+          icon: 'fas fa-check',
+          default: true,
+          callback: (event, button, _) => {
+            const t = new FormDataExtended(button.form).object;
             if (typeof(t.increase) === "number") {
               const validIds = [];
               for (let [k,v] of Object.entries(t)) {
                 if (k.startsWith("id.") && v) validIds.push(k.substring(3));
               }
               if (validIds.length > 0) {
-                game.actors.updateAll(actor => ({ 'system.attributes.xp.value': Math.max(actor.system.attributes.xp.value + t.increase, 0)}), (actor) => validIds.includes(actor.id));
+                game.actors.updateAll(
+                  actor => ({'system.attributes.xp.value': Math.max(Number(actor.system.attributes.xp.value) + t.increase, 0)}),
+                  (actor) => validIds.includes(actor.id)
+                );
               }
             }
           }
         }
-      },
-      default: "increase"
+      ]
     });
-    dialog.render(true);
+
+    await dialog.render({ force: true });
   }
 }

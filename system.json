@@ -31,7 +31,7 @@
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": 12,
-    "verified": "12.325"
+    "verified": "12.327"
   },
   "esmodules": ["module/taluspnp.mjs"],
   "styles": ["css/taluspnp.css"],
