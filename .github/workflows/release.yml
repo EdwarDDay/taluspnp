@@ -69,7 +69,7 @@ jobs:
           body: ${{ steps.changelog_reader.outputs.changes }}
 
       - name: Release
-        uses: illandril/FoundryVTT-package-release-action@v1.0.2
+        uses: illandril/FoundryVTT-package-release-action@v1.0.3
         with:
           package-release-token: ${{ secrets.PACKAGE_RELEASE_TOKEN }}
           manifest-url: "https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version-without-v }}/system.json"
