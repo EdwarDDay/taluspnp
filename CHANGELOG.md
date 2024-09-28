@@ -2,6 +2,8 @@
 
 ## [UNRELEASED]
 
+## [0.4.0] - 2024-09-28
+
 ### Changed
 
 - convert **increase EP** dialog to `DialogV2`
