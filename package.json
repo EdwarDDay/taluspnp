@@ -26,6 +26,6 @@
     "@foundryvtt/foundryvtt-cli": "^1.0.2",
     "nedb-promises": "^6.2.3",
     "fancy-log": "^2.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   }
 }
